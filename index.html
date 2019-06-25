@@ -7,14 +7,17 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>  
+	 
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+
+
+
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
 	
-  	
 	<title>Mediakit | Multimedios Televisión</title>
 </head>
 <body>
@@ -45,11 +48,94 @@
 		
 		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
 	</header>
+
+	
 	
 	<main class="cd-main-content">
 		
+		<div class="barchart-Wrapper"><!-- bar first -->
+		
+			<div class="barchart-TimeCol">
+				<div class="barchart-Time">
+					<span class="barchart-TimeText">100</span>
+				</div>
+				<div class="barchart-Time">
+					<span class="barchart-TimeText">90</span>
+				</div>
+				<div class="barchart-Time">
+					<span class="barchart-TimeText">80</span>
+				</div>
+				<div class="barchart-Time">
+					<span class="barchart-TimeText">70</span>
+				</div>
+				<div class="barchart-Time">
+					<span class="barchart-TimeText">60</span>
+				</div>
+				<div class="barchart-Time">
+					<span class="barchart-TimeText">50</span>
+				</div>
+				<div class="barchart-Time">
+					<span class="barchart-TimeText">40</span>
+				</div>
+				<div class="barchart-Time">
+					<span class="barchart-TimeText">30</span>
+				</div>
+				<div class="barchart-Time">
+					<span class="barchart-TimeText">20</span>
+				</div>
+				<div class="barchart-Time">
+					<span class="barchart-TimeText">10</span>
+				</div>
+				<div class="barchart-Time">
+					<span class="barchart-TimeText">0</span>
+				</div>
+			</div>
+	
+			<div class="barChart-Container">
+				<div class="barchart">
+					<div class="barchart-Col">
+						<div class="barchart-Bar" style="height: 10%;"></div>
+						<div class="barchart-BarFooter">Mon</div>
+					</div>
+					<div class="barchart-Col">
+						<div class="barchart-Bar" style="height: 30%;"></div>
+						<div class="barchart-BarFooter">Tues</div>
+					</div>
+					<div class="barchart-Col">
+						<div class="barchart-Bar" style="height: 43.5%;"></div>
+						<div class="barchart-BarFooter">Wed</div>
+					</div>
+					<div class="barchart-Col">
+						<div class="barchart-Bar" style="height: 58%;"></div>
+						<div class="barchart-BarFooter">Thurs</div>
+					</div>
+					<div class="barchart-Col">
+						<div class="barchart-Bar" style="height: 72.5%;"></div>
+						<div class="barchart-BarFooter">Fri</div>
+					</div>
+					<div class="barchart-Col">
+						<div class="barchart-Bar" style="height: 87%;"></div>
+						<div class="barchart-BarFooter">Sat</div>
+					</div>
+					<div class="barchart-Col">
+						<div class="barchart-Bar" style="height: 100%;"></div>
+						<div class="barchart-BarFooter">Sun</div>
+					</div>
+	
+				</div>
+			</div>
+		</div><!-- bar first -->	
 	</main>
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+<script>
+/* Not massively important, just using height as a text (e.g. 100% etc) for the top of the bar's */
+document.addEventListener("DOMContentLoaded", function(event) { 
+	  var divs = document.getElementsByClassName('barchart-Bar');
+	  for(var i=0; i < divs.length; i++) { 
+		 divs[i].setAttribute("attr-height", divs[i].style.height);
+	  }
+  });
+</script>
 </body>
 </html>
