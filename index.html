@@ -9,6 +9,14 @@
 
 	 
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap" rel="stylesheet"> 
+
+
+	<script src="https://kit.fontawesome.com/b22fbe9bfb.js"></script>
+
+
+
+
 
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
@@ -57,26 +65,78 @@
 
 	<main class="cd-main-content">
 
+	<!-- 	<div class="container_flex_title">
+			<div class="container_0">
+				multimedios.com
+			</div>
+		</div>
 
 
-		<div class="container_flex">
+
+ -->
+
+
+ 
+
+		<section>
+		  <div class="container">
+		    <h1>Multimedios<br>Tv</h1>
+		    <div class="bg-text">MultimediosTv</div>
+		  </div>
+		</section>
+
+
+
+		<div class="container_flex_multimedios">
 			<div class="container_1">
-			 <p>1,324,084</p>
-			 <p>Usuarios únicos</p>
+			 <h3 class="timer count-title count-number" data-to="2948583" data-speed="1500"></h3>
+			 <i class="fas fa-users"></i>
+			 <p class="p1">Usuarios únicos</p>
 		    </div>
 			<div class="container_1">
-			 <p>402,379</p>
-			 <p>Visitas</p>
+			 <h3 class="timer count-title count-number" data-to="402379" data-speed="1500"></h3>
+			 <i class="fas fa-street-view"></i>
+			 <p class="p1">Visitas</p>
 		    </div>
 			<div class="container_1">
-			 <p>13,874,532</p>
-			 <p>Páginas vistas</p>
+			 <h3 class="timer count-title count-number" data-to="13874532" data-speed="1500"></h3>
+			  <i class="fas fa-pager"></i>
+			 <p class="p1">Páginas vistas</p>
 		    </div>
 			<div class="container_1">
-			 <p>00:04:41</p>
-			  <p>Tiempo promedio</p>
+			 <h3>00:04:41</h3>
+			 <i class="fas fa-user-clock"></i>
+			  <p class="p1">Tiempo promedio</p>
 		    </div>
 		</div>
+
+
+		<div class="container_flex_multimedios">
+			<div class="container_2">
+			 <h3 class="timer count-title count-number" data-to="2948583" data-speed="1500"></h3>
+			 <i class="fas fa-users"></i>
+			 <p class="p2">Usuarios únicos</p>
+		    </div>
+			<div class="container_2">
+			 <h3 class="timer count-title count-number" data-to="402379" data-speed="1500"></h3>
+			 <i class="fas fa-street-view"></i>
+			 <p class="p2">Visitas</p>
+		    </div>
+			<div class="container_2">
+			 <h3 class="timer count-title count-number" data-to="13874532" data-speed="1500"></h3>
+			  <i class="fas fa-pager"></i>
+			 <p class="p2">Páginas vistas</p>
+		    </div>
+			<div class="container_2">
+			 <h3>00:04:41</h3>
+			 <i class="fas fa-user-clock"></i>
+			  <p class="p2">Tiempo promedio</p>
+		    </div>
+		</div>
+
+
+
+
 
 
     <!--     <div id="space-between" style="background-color: red">
@@ -229,40 +289,137 @@
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 <script>
+(function ($) {
+	$.fn.countTo = function (options) {
+		options = options || {};
+		
+		return $(this).each(function () {
+			// set options for current element
+			var settings = $.extend({}, $.fn.countTo.defaults, {
+				from:            $(this).data('from'),
+				to:              $(this).data('to'),
+				speed:           $(this).data('speed'),
+				refreshInterval: $(this).data('refresh-interval'),
+				decimals:        $(this).data('decimals')
+			}, options);
+			
+			// how many times to update the value, and how much to increment the value on each update
+			var loops = Math.ceil(settings.speed / settings.refreshInterval),
+				increment = (settings.to - settings.from) / loops;
+			
+			// references & variables that will change with each update
+			var self = this,
+				$self = $(this),
+				loopCount = 0,
+				value = settings.from,
+				data = $self.data('countTo') || {};
+			
+			$self.data('countTo', data);
+			
+			// if an existing interval can be found, clear it first
+			if (data.interval) {
+				clearInterval(data.interval);
+			}
+			data.interval = setInterval(updateTimer, settings.refreshInterval);
+			
+			// initialize the element with the starting value
+			render(value);
+			
+			function updateTimer() {
+				value += increment;
+				loopCount++;
+				
+				render(value);
+				
+				if (typeof(settings.onUpdate) == 'function') {
+					settings.onUpdate.call(self, value);
+				}
+				
+				if (loopCount >= loops) {
+					// remove the interval
+					$self.removeData('countTo');
+					clearInterval(data.interval);
+					value = settings.to;
+					
+					if (typeof(settings.onComplete) == 'function') {
+						settings.onComplete.call(self, value);
+					}
+				}
+			}
+			
+			function render(value) {
+				var formattedValue = settings.formatter.call(self, value, settings);
+				$self.html(formattedValue);
+			}
+		});
+	};
+	
+	$.fn.countTo.defaults = {
+		from: 0,               // the number the element should start at
+		to: 0,                 // the number the element should end at
+		speed: 1000,           // how long it should take to count between the target numbers
+		refreshInterval: 5,  // how often the element should be updated
+		decimals: 0,           // the number of decimal places to show
+		formatter: formatter,  // handler for formatting the value before rendering
+		onUpdate: null,        // callback method for every time the element is updated
+		onComplete: null       // callback method for when the element finishes updating
+	};
+	
+	function formatter(value, settings) {
+		return value.toFixed(settings.decimals);
+	}
+}(jQuery));
 
-/* Not massively important, just using height as a text (e.g. 100% etc) for the top of the bar's */
-document.addEventListener("DOMContentLoaded", function(event) { 
-	  var divs = document.getElementsByClassName('barchart-Bar');
-	  for(var i=0; i < divs.length; i++) { 
-		 divs[i].setAttribute("attr-height", divs[i].style.height);
-	  }
+jQuery(function ($) {
+  // custom formatting example
+  $('.count-number').data('countToOptions', {
+	formatter: function (value, options) {
+	  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+	}
+  });
+  
+  // start all the timers
+  $('.timer').each(count);  
+  
+  function count(options) {
+	var $this = $(this);
+	options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+	$this.countTo(options);
+  }
 });
+/* Not massively important, just using height as a text (e.g. 100% etc) for the top of the bar's */
+// document.addEventListener("DOMContentLoaded", function(event) { 
+// 	  var divs = document.getElementsByClassName('barchart-Bar');
+// 	  for(var i=0; i < divs.length; i++) { 
+// 		 divs[i].setAttribute("attr-height", divs[i].style.height);
+// 	  }
+// });
 
 /* bar gender- */
-var maleViz = new GenderViz(document.getElementById('pluginContainer'), { theme: 'green', gender: 'male', value: 20, title: 'Male', position: 'bottom' });
-var femaleViz = new GenderViz(document.getElementById('pluginContainer2'), { theme: 'blue', gender: 'female', value: 60, title: 'Female', position: 'bottom' });
+// var maleViz = new GenderViz(document.getElementById('pluginContainer'), { theme: 'green', gender: 'male', value: 20, title: 'Male', position: 'bottom' });
+// var femaleViz = new GenderViz(document.getElementById('pluginContainer2'), { theme: 'blue', gender: 'female', value: 60, title: 'Female', position: 'bottom' });
 
-$(window).on('resize', function() {
+// $(window).on('resize', function() {
     
-        if ($(this).width() < 765) {
-           $('tr td:first-child').click(function(){
+//         if ($(this).width() < 765) {
+//            $('tr td:first-child').click(function(){
  
-              $(this).siblings().css({'display': 'inline-block'});
+//               $(this).siblings().css({'display': 'inline-block'});
  
-              var $this = $(this);
-              setTimeout(function(){
-              $this.siblings().css('transform', 'translateY(0)'); 
-             },0);
+//               var $this = $(this);
+//               setTimeout(function(){
+//               $this.siblings().css('transform', 'translateY(0)'); 
+//              },0);
  
-              $('tr td:first-child').not($(this)).siblings().css({'display': 'none', 'transform': 'translateY(-9999px)'});
-          });  
-        } 
-	else if ($(this).width() > 760) {
-            $( "tr td:first-child").unbind( "click" );
-            $('tr td:first-child').siblings().css({'display': '', 'transform': ''});
-        }
+//               $('tr td:first-child').not($(this)).siblings().css({'display': 'none', 'transform': 'translateY(-9999px)'});
+//           });  
+//         } 
+// 	else if ($(this).width() > 760) {
+//             $( "tr td:first-child").unbind( "click" );
+//             $('tr td:first-child').siblings().css({'display': '', 'transform': ''});
+//         }
     
-}).resize();
+// }).resize();
 
 
 </script>

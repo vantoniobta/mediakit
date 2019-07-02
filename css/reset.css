@@ -162,14 +162,29 @@ table {
 
 
 
-.container_flex{
+
+
+
+
+.container_flex_title{
+	width: 100%;
+/*	background-color: #C0FFEE;*/
+	display: flex;
+	justify-content: center;
+}
+.container_0{
+	font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    color: #4d665f;
+}
+
+.container_flex_multimedios{
 	width: 100%;
 	background:#f2f2f2;
 	padding: 0px;
 	border:5px solid #f2f2f2;
 	margin: 0px;
     color: #fff;
-
     /* flexbox */
 	display: flex;
     flex-wrap: wrap; 
@@ -177,16 +192,99 @@ table {
     justify-content:center;
     align-items:center;
 }
+.p1{
+  font-size: 18px;
+  color: #fff;
+}
+.p2{
+  font-size: 18px;
+  color: #777;
+}
 .container_1{
 	color: #FFF;
 	margin: 5px;
 	width: 300px;
 	/*height: 50px;*/
-	background:#746;
+	background:#bada55;
 	text-align: center;	
 	font-size: 30px;
-
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+   /*  border-left: 6px solid #fff;*/
 }
+
+.container_2{
+	color: #777;
+	margin: 5px;
+	width: 300px;
+	/*height: 50px;*/
+	text-align: center;	
+	font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    border-left: 6px solid #fd7d7a;
+    background-color: white;
+}
+
+
+
+
+
+section {
+  font-family: montserrat;
+  background: #F4F4F4;
+}
+
+section .container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  padding: 0 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+section .container h1 {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin: 0;
+  padding: 0.4em 0;
+  font-weight: 700;
+  font-size: 2.4em;
+  line-height: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  color: #777;
+  white-space: nowrap;
+}
+
+section .container .bg-text {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  width: 100%;
+  display: inline-block;
+  margin: 0;
+  font-size: 7.9em;
+  line-height: 0.7em; 
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.1em;
+  color: #F4F4F4;
+  white-space: nowrap;
+}
+
+
+
+
+
+
+
+
 
 
 
