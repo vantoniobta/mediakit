@@ -164,21 +164,9 @@ table {
 
 
 
+  /* Inicio flexbox multimedios y telediario */
 
-
-.container_flex_title{
-	width: 100%;
-/*	background-color: #C0FFEE;*/
-	display: flex;
-	justify-content: center;
-}
-.container_0{
-	font-size: 35px;
-    font-family: 'Roboto', sans-serif;
-    color: #4d665f;
-}
-
-.container_flex_multimedios{
+.container_flex_metrics{
 	width: 100%;
 	background:#f2f2f2;
 	padding: 0px;
@@ -190,17 +178,8 @@ table {
     flex-wrap: wrap; 
     align-items: center;
     justify-content:center;
-    align-items:center;
 }
-.p1{
-  font-size: 18px;
-  color: #fff;
-}
-.p2{
-  font-size: 18px;
-  color: #777;
-}
-.container_1{
+.div_flex_multimedios{
 	color: #FFF;
 	margin: 5px;
 	width: 300px;
@@ -213,7 +192,7 @@ table {
    /*  border-left: 6px solid #fff;*/
 }
 
-.container_2{
+.div_flex_telediario{
 	color: #777;
 	margin: 5px;
 	width: 300px;
@@ -224,10 +203,51 @@ table {
     border-radius: 5px;
     border-left: 6px solid #fd7d7a;
     background-color: white;
+
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content:space-around;
+}
+
+.p1_multimedios{
+  font-size: 18px;
+  color: #fff;
+}
+.p2_telediario{
+  font-size: 18px;
+  color: #777;
+}
+
+/* Fin flexbox multimedios y telediario */
+
+
+
+/* flexbox div gender */
+
+.container_flex_gender{
+  display: flex;
+  width: 100%;
+  padding: 0px;
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content:center;
+}
+.container_gender_item{
+    color: #777;
+	margin: 5px;
+	width: 300px;
+	/*height: 50px;*/
+	text-align: center;	
+	font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    border-right: 6px solid #65f49f;
+    background-color: #fff
 }
 
 
-
+/* Fin flexbox div gender */
 
 
 section {
@@ -497,3 +517,48 @@ table .total td {
 }
 
 
+
+
+
+footer{
+    
+	background-color: #33414a;
+	color: white;
+	width: 100%;
+	text-align: justify;
+	position: absolute;
+	display:block;
+	left: 0px;
+	font-family: 'Roboto', sans-serif;
+}
+.footer_container{
+	 display: flex;
+	  width: 100%;
+	  padding: 0px;
+	  flex-wrap: wrap; 
+	  align-items: center;
+	  justify-content:center;
+	  
+}
+.item_footer{
+	color: #fff;
+	margin: 5px;
+	width: 300px;
+	/*height: 50px;*/
+	text-align: center;	
+	font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+}
+.header_footer{
+	font-size: 18px;
+	margin: 5px;
+}
+.text_footer{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+.fab{
+	margin: 5px;
+	color: #C0FFEE;
+}
