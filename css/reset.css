@@ -56,105 +56,6 @@ table {
 }
 
 
-/* bar first */
-.barchart-Wrapper {
-	display: table;
-	position: relative;
-	margin: 20px 0;
-	height: 320px; /* defines height for the box, everything else responds to this */
-}
-
-.barChart-Container {
-	display: table-cell;
-	width: 98%;
-	height: 100%;
-	padding-left: 15px;
-}
-
-.barchart {
-	display: table;
-	table-layout: fixed;
-	height: 100%;
-	width: 100%;
-}
-
-.barchart-Col {
-	position: relative;
-	vertical-align: bottom;
-	display: table-cell;
-	height: 100%;
-}
-.barchart-Col +.barchart-Col {
-	border-left: 4px solid transparent;
-}
-
-.barchart-Bar {
-	background: #ed2e82;
-	position: relative;
-}
-.barchart-Bar:after {
-	content: attr(attr-height);
-	color: white;
-	position: absolute;
-	text-align: center;
-	width: 100%;
-}
-
-.barchart-BarFooter {
-	position: absolute;
-	text-align: center;
-	height: 10%;
-	width: 100%;
-}
-
-.barchart-TimeCol {
-	position: absolute;
-	top: 0;
-	width: 2%;
-	height: 100%;
-	width: 100%;
-	overflow-x: hidden;
-}
-
-.barchart-Time {
-	height: 10%;
-	vertical-align: middle;
-	position: relative;
-}
-
-.barchart-Time:first-child .barchart-TimeText {
-	top: -3px;
-}
-
-.barchart-Time:last-child .barchart-TimeText {
-	top: -12px;
-}
-
-.barchart-Time:after {
-	border-bottom: 1px dashed #ccc;
-	content: "";
-	position: absolute;
-	width: 10000%;
-	left: 0;
-	top: 0em;
-}
-
-.barchart-Time:last-child:after {
-	border-bottom: none;
-}
-
-.barchart-TimeText {
-	position: absolute;
-	top: -7px;
-	z-index: 1;
-	background: white;
-	padding-right: 5px;
-}
-
-.lt-ie9 .barchart-TimeText {
-	top: -3px !important;
-}
-
 
 #demo-wrapper {
 	display: flex;
@@ -201,7 +102,7 @@ table {
 	font-size: 30px;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
-    border-left: 6px solid #fd7d7a;
+    border-left: 6px solid #FB1;
     background-color: white;
 
     display: flex;
@@ -242,8 +143,8 @@ table {
 	font-size: 30px;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
-    border-right: 6px solid #65f49f;
-    background-color: #fff
+    border-bottom: 5px solid #65f49f;
+    background-color: #fff;
 }
 
 
@@ -298,228 +199,6 @@ section .container .bg-text {
   white-space: nowrap;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* table */
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  overflow: hidden;
-}
-table td, table th {
-  border-top: 1px solid #ECF0F1;
-  padding: 10px;
-}
-table td {
-  border-left: 1px solid #ECF0F1;
-  border-right: 1px solid #ECF0F1;
-}
-table th {
-  background-color: #FF6B6D;
-}
-table tr:nth-of-type(even) td {
-  background-color: #FFB2B3;
-}
-table .total th {
-  background-color: white;
-}
-table .total td {
-  text-align: right;
-  font-weight: 700;
-}
- 
-.responsive-toggle {
-  display: none;
-}
- 
-@media only screen and (max-width: 300px) {
-  table tr th:not(:first-child) {
-    width: 50%;
-    font-size: 14px;
-  }
-  table tr td:not(:first-child) {
-    width: 50%;
-    font-size: 14px;
-  }
-}
- 
- 
-@media only screen and (max-width: 765px) {
-  p {
-    display: block;
-    font-weight: bold;
-  }
- 
-  table tr td:not(:first-child), table tr th:not(:first-child), table tr td:not(.total-budget) {
-    display: none;
-  }
-  table tr:nth-of-type(even) td:first-child {
-    background-color: #FFB2B3;
-  }
-  table tr:nth-of-type(odd) td:first-child {
-    background-color: white;
-  }
-  table tr:nth-of-type(even) td:not(:first-child) {
-    background-color: white;
-  }
-  table tr th:first-child {
-    width: 100%;
-    display: block;
-  }
-  table tr th:not(:first-child) {
-    width: 40%;
-    transition: transform 0.4s ease-out;
-    transform: translateY(-9999px);
-    position: relative;
-    z-index: -1;
-  }
-  table tr td:not(:first-child) {
-    transition: transform 0.4s ease-out;
-    transform: translateY(-9999px);
-    width: 60%;
-    position: relative;
-    z-index: -1;
-  }
-  table tr td:first-child {
-    display: block;
-    cursor: pointer;
-  }
-  table tr.total th {
-    width: 25%;
-    display: inline-block;
-  }
-  table tr td.total-budget {
-    display: inline-block;
-    transform: translateY(0);
-    width: 75%;
-  }
-}
-/** code by webdevtrick ( https://webdevtrick.com ) **/
-* {
-  box-sizing: border-box;
-}
- 
-body {
-  font-family: 'Lato', sans-serif;
-  color: #202020;
-}
- 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  overflow: hidden;
-}
-table td, table th {
-  border-top: 1px solid #ECF0F1;
-  padding: 10px;
-}
-table td {
-  border-left: 1px solid #ECF0F1;
-  border-right: 1px solid #ECF0F1;
-}
-table th {
-  background-color: #FF6B6D;
-}
-table tr:nth-of-type(even) td {
-  background-color: #FFB2B3;
-}
-table .total th {
-  background-color: white;
-}
-table .total td {
-  text-align: right;
-  font-weight: 700;
-}
- 
-.responsive-toggle {
-  display: none;
-}
- 
-@media only screen and (max-width: 300px) {
-  table tr th:not(:first-child) {
-    width: 50%;
-    font-size: 14px;
-  }
-  table tr td:not(:first-child) {
-    width: 50%;
-    font-size: 14px;
-  }
-}
- 
- 
-@media only screen and (max-width: 765px) {
-  p {
-    display: block;
-    font-weight: bold;
-  }
- 
-  table tr td:not(:first-child), table tr th:not(:first-child), table tr td:not(.total-budget) {
-    display: none;
-  }
-  table tr:nth-of-type(even) td:first-child {
-    background-color: #FFB2B3;
-  }
-  table tr:nth-of-type(odd) td:first-child {
-    background-color: white;
-  }
-  table tr:nth-of-type(even) td:not(:first-child) {
-    background-color: white;
-  }
-  table tr th:first-child {
-    width: 100%;
-    display: block;
-  }
-  table tr th:not(:first-child) {
-    width: 40%;
-    transition: transform 0.4s ease-out;
-    transform: translateY(-9999px);
-    position: relative;
-    z-index: -1;
-  }
-  table tr td:not(:first-child) {
-    transition: transform 0.4s ease-out;
-    transform: translateY(-9999px);
-    width: 60%;
-    position: relative;
-    z-index: -1;
-  }
-  table tr td:first-child {
-    display: block;
-    cursor: pointer;
-  }
-  table tr.total th {
-    width: 25%;
-    display: inline-block;
-  }
-  table tr td.total-budget {
-    display: inline-block;
-    transform: translateY(0);
-    width: 75%;
-  }
-}
-
-
-
-
-
 footer{
     
 	background-color: #33414a;
@@ -538,7 +217,7 @@ footer{
 	  flex-wrap: wrap; 
 	  align-items: center;
 	  justify-content:center;
-	  
+
 }
 .item_footer{
 	color: #fff;
