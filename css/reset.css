@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section, main {
 }
 body {
 	line-height: 1;
-	margin: 10px;
+	/*margin: 10px;*/
 	font: 12px "Verdana";
 }
 h1{
@@ -61,43 +61,160 @@ table {
 	display: flex;
 }
 
+ /* container_multimedios */
+ .container_multimedios{
+   width: 100%;
+   border:0px solid #f2f2f2;
+ 
+   display: flex;
+   flex-wrap: wrap; 
+   justify-content:center;
+
+ }
+ .multimedios_item_0{
+    width: 600px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
 
 
 
+    display: flex;
+    flex-wrap: wrap; 
+    /*  align-items: center;*/
+    align-content: center;
+    justify-content:center;
+ 
+ }
+ .multimedios_item_0_1{
+    color: #777;
+	margin: 5px;
+	width: 250px;
+	/*height: 50px;
+	background:#bada55;*/
+	text-align: center;	
+	font-size: 26px;
+	border: 1px solid #777;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+   /*  border-left: 6px solid #fff;*/
+   border-left: 6px solid #eab100;
 
-  /* Inicio flexbox multimedios y telediario */
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content:space-around;
+
+ }
+ .p1_multimedios{
+  font-size: 14px;
+  color: #eab100;
+}
+
+.container_item2{
+	
+}
+.container_telediario{
+   width: 100%;
+   border:0px solid #f2f2f2;
+
+background: #e7f9fa;  /* fallback for old browsers */
+
+
+   display: flex;
+   flex-wrap: wrap; 
+   justify-content:center;
+
+ }
+.telediario_item_0{
+    width: 600px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+
+
+
+    display: flex;
+    flex-wrap: wrap; 
+    /*  align-items: center;*/
+    align-content: center;
+    justify-content:center;
+ 
+ }
+ .telediario_item_0{
+    width: 600px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+
+
+
+    display: flex;
+    flex-wrap: wrap; 
+    /*  align-items: center;*/
+    align-content: center;
+    justify-content:center;
+ 
+ }
+ .telediario_item_0_1{
+    color: #000;
+	margin: 5px;
+	width: 250px;
+	/*height: 50px;
+	background:#bada55;*/
+	text-align: center;	
+	font-size: 26px;
+	border: 1px solid #000;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+     border-left: 6px solid #000;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content:space-around;
+
+ }
+ .p1_telediario{
+  font-size: 14px;
+  color: #000;
+}
+
+
+  /* Inicio flexbox multimedios y telediario 
 
 .container_flex_metrics{
 	width: 100%;
-	background:#f2f2f2;
+
 	padding: 0px;
 	border:5px solid #f2f2f2;
 	margin: 0px;
     color: #fff;
-    /* flexbox */
+   
 	display: flex;
     flex-wrap: wrap; 
     align-items: center;
     justify-content:center;
 }
 .div_flex_multimedios{
-	color: #FFF;
+	color: #777;
 	margin: 5px;
 	width: 300px;
-	/*height: 50px;*/
-	background:#bada55;
+
 	text-align: center;	
 	font-size: 30px;
+	border: 1px solid #777;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
-   /*  border-left: 6px solid #fff;*/
+
+
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content:space-around;
 }
 
 .div_flex_telediario{
 	color: #777;
 	margin: 5px;
 	width: 300px;
-	/*height: 50px;*/
+
 	text-align: center;	
 	font-size: 30px;
     font-family: 'Roboto', sans-serif;
@@ -111,46 +228,52 @@ table {
     justify-content:space-around;
 }
 
-.p1_multimedios{
-  font-size: 18px;
-  color: #fff;
-}
+
 .p2_telediario{
   font-size: 18px;
   color: #777;
 }
-
-/* Fin flexbox multimedios y telediario */
-
-
-
-/* flexbox div gender */
-
-.container_flex_gender{
-  display: flex;
-  width: 100%;
-  padding: 0px;
-  flex-wrap: wrap; 
-  align-items: center;
-  justify-content:center;
+.p2_app{
+  font-size: 18px;
+  color: #472c09;
 }
-.container_gender_item{
-    color: #777;
+*/
+/*
+.container_flex_app{
+    width: 100%;
+	background:#f2f2f2;
+	padding: 0px;
+	border:5px solid #f2f2f2;
+	margin: 0px;
+    color: #fff;
+
+	display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content:center;
+}
+.container_app_item{
+    color: #472c09;
 	margin: 5px;
 	width: 300px;
-	/*height: 50px;*/
+	height: 50px;
 	text-align: center;	
 	font-size: 30px;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
-    border-bottom: 5px solid #65f49f;
-    background-color: #fff;
+
+    background-color: #edd94f;
+
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content:space-around;
 }
 
 
-/* Fin flexbox div gender */
 
 
+*/
 section {
   font-family: montserrat;
   background: #F4F4F4;
@@ -159,7 +282,7 @@ section {
 section .container {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1230px;
   margin: auto;
   background: #fff;
   padding: 0 10px;
@@ -174,7 +297,7 @@ section .container h1 {
   margin: 0;
   padding: 0.4em 0;
   font-weight: 700;
-  font-size: 2.4em;
+  font-size: 2.0em;
   line-height: 0.8em;
   text-transform: uppercase;
   letter-spacing: -0.05em;
@@ -190,9 +313,9 @@ section .container .bg-text {
   width: 100%;
   display: inline-block;
   margin: 0;
-  font-size: 7.9em;
+  font-size: 6.5em;
   line-height: 0.7em; 
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: -0.1em;
   color: #F4F4F4;
@@ -200,7 +323,6 @@ section .container .bg-text {
 }
 
 footer{
-    
 	background-color: #33414a;
 	color: white;
 	width: 100%;

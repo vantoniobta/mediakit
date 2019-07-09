@@ -493,7 +493,7 @@ header::before {
 }
 @media only screen and (min-width: 1024px) {
   .cd-main-content {
-    padding-top: 80px;
+    padding-top: 90px;
   }
   .cd-main-content.nav-is-visible {
     -webkit-transform: translateX(0);
