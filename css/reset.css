@@ -22,6 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -32,11 +33,14 @@ body {
 	line-height: 1;
 	/*margin: 10px;*/
 	font: 12px "Verdana";
+
 }
 h1{
-	font-size: 40px;
+	font-size: 26px;
 	text-align: center;  
-	margin: 22px 0;
+	margin: 18px 0;
+	font-family: 'Roboto', sans-serif;
+	color: #4d665f;
   }
 
 ol, ul {
@@ -65,7 +69,7 @@ table {
  .container_multimedios{
    width: 100%;
    border:0px solid #f2f2f2;
- 
+   background-color: #f7eee8;
    display: flex;
    flex-wrap: wrap; 
    justify-content:center;
@@ -86,7 +90,7 @@ table {
  
  }
  .multimedios_item_0_1{
-    color: #777;
+    color: #003a5c;
 	margin: 5px;
 	width: 250px;
 	/*height: 50px;
@@ -107,77 +111,142 @@ table {
  }
  .p1_multimedios{
   font-size: 14px;
-  color: #eab100;
+  color: #003a5c;
 }
-
-.container_item2{
-	
-}
+/* container_telediario */
 .container_telediario{
    width: 100%;
    border:0px solid #f2f2f2;
-
-background: #e7f9fa;  /* fallback for old browsers */
-
-
+   /*background: #faf7f3;   fallback for old browsers */
+  
    display: flex;
    flex-wrap: wrap; 
    justify-content:center;
 
  }
-.telediario_item_0{
-    width: 600px;
-    display: -webkit-flex;
-    display: -ms-flexbox;
 
-
-
-    display: flex;
-    flex-wrap: wrap; 
-    /*  align-items: center;*/
-    align-content: center;
-    justify-content:center;
- 
- }
  .telediario_item_0{
-    width: 600px;
+    width: 1200px;
     display: -webkit-flex;
     display: -ms-flexbox;
-
-
-
     display: flex;
     flex-wrap: wrap; 
     /*  align-items: center;*/
     align-content: center;
     justify-content:center;
- 
  }
  .telediario_item_0_1{
-    color: #000;
+    color: #4d665f;
 	margin: 5px;
 	width: 250px;
 	/*height: 50px;
 	background:#bada55;*/
+
 	text-align: center;	
 	font-size: 26px;
-	border: 1px solid #000;
+	border: 1px solid #4d665f;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
-     border-left: 6px solid #000;
+     border-left: 6px solid #4d665f;
+/*     background-color: #faf7f3;*/
+
+ }
+ .p1_telediario{
+  font-size: 14px;
+  color: #4d665f;
+}
+
+
+
+
+
+
+
+.container_multimedia{
+   width: 100%;
+   border:0px solid #f2f2f2;
+   /*background: #faf7f3;   fallback for old browsers */
+   background-color: #ddf1f6;
+   display: flex;
+    flex-wrap: wrap; 
+    /*  align-items: center;*/
+     align-content: center;
+    justify-content:center;
+
+}
+.item_multimedia{
+	color: #4d665f;
+	margin: 5px;
+	width: 350px;
+	/*height: 50px;
+	background:#bada55;*/
+
+	text-align: center;	
+	font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+
+
     display: flex;
     flex-wrap: wrap; 
     align-items: center;
     justify-content:space-around;
 
- }
- .p1_telediario{
-  font-size: 14px;
-  color: #000;
 }
 
+.container_age{
+	background-color: #ddf1f6;
+	width: 100%;
+    border:0px solid #f2f2f2;
+ 
+    display: flex;
+    flex-wrap: wrap; 
+    /*  align-items: center;*/
+    align-content: center;
+    justify-content:center;
+	
+	}
+.item_age{
+	color: #4d665f;
+	margin: 5px;
+	width: 300px;
+	/*height: 50px;
+	background:#bada55;*/
+	text-align: center;	
+	font-size: 26px;
+	border: 1px solid #4d665f;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+     border-bottom: 6px solid #4d665f;
 
-  /* Inicio flexbox multimedios y telediario 
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content:space-around;
+
+	}
+	.item_age_0{
+	color: #4d665f;
+	margin: 5px;
+	width: 300px;
+	/*height: 50px;
+	background:#bada55;*/
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content:space-around;
+
+	}
+	 .p1_age{
+	  font-size: 16px;
+	  color: #4d665f;
+    }
+
+
+
+
+
+/* Inicio flexbox multimedios y telediario 
 
 .container_flex_metrics{
 	width: 100%;
