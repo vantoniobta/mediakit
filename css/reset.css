@@ -100,8 +100,8 @@ table {
 	border: 1px solid #777;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
-   /*  border-left: 6px solid #fff;*/
-   border-left: 6px solid #eab100;
+    /*  border-left: 6px solid #fff;*/
+    border-left: 6px solid #eab100;
 
     display: flex;
     flex-wrap: wrap; 
@@ -136,7 +136,7 @@ table {
     justify-content:center;
  }
  .telediario_item_0_1{
-    color: #4d665f;
+    color: #1e5372;
 	margin: 5px;
 	width: 250px;
 	/*height: 50px;
@@ -144,11 +144,12 @@ table {
 
 	text-align: center;	
 	font-size: 26px;
-	border: 1px solid #4d665f;
+	border: 1px solid #1e5372;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
-     border-left: 6px solid #4d665f;
+     border-left: 6px solid #1e5372;
 /*     background-color: #faf7f3;*/
+background-color: #f7eee8;
 
  }
  .p1_telediario{
@@ -166,7 +167,7 @@ table {
    width: 100%;
    border:0px solid #f2f2f2;
    /*background: #faf7f3;   fallback for old browsers */
-   background-color: #ddf1f6;
+   background-color: #e4eed4;
    display: flex;
     flex-wrap: wrap; 
     /*  align-items: center;*/
@@ -177,7 +178,7 @@ table {
 .item_multimedia{
 	color: #4d665f;
 	margin: 5px;
-	width: 350px;
+	width: 250px;
 	/*height: 50px;
 	background:#bada55;*/
 
@@ -195,7 +196,7 @@ table {
 }
 
 .container_age{
-	background-color: #ddf1f6;
+	background-color: #e4eed4;
 	width: 100%;
     border:0px solid #f2f2f2;
  
@@ -217,7 +218,7 @@ table {
 	border: 1px solid #4d665f;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
-     border-bottom: 6px solid #4d665f;
+    border-bottom: 6px solid #4d665f;
 
     display: flex;
     flex-wrap: wrap; 
@@ -226,9 +227,9 @@ table {
 
 	}
 	.item_age_0{
-	color: #4d665f;
-	margin: 5px;
-	width: 300px;
+  	color: #4d665f;
+  	margin: 5px;
+  	width: 300px;
 	/*height: 50px;
 	background:#bada55;*/
     display: flex;
@@ -243,106 +244,184 @@ table {
     }
 
 
+  .barChart {
+    height: 215px;
+  }
 
 
 
-/* Inicio flexbox multimedios y telediario 
-
-.container_flex_metrics{
-	width: 100%;
-
-	padding: 0px;
-	border:5px solid #f2f2f2;
-	margin: 0px;
-    color: #fff;
-   
-	display: flex;
-    flex-wrap: wrap; 
-    align-items: center;
-    justify-content:center;
-}
-.div_flex_multimedios{
-	color: #777;
-	margin: 5px;
-	width: 300px;
-
-	text-align: center;	
-	font-size: 30px;
-	border: 1px solid #777;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 5px;
 
 
-    display: flex;
-    flex-wrap: wrap; 
-    align-items: center;
-    justify-content:space-around;
-}
-
-.div_flex_telediario{
-	color: #777;
-	margin: 5px;
-	width: 300px;
-
-	text-align: center;	
-	font-size: 30px;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 5px;
-    border-left: 6px solid #FB1;
-    background-color: white;
-
-    display: flex;
-    flex-wrap: wrap; 
-    align-items: center;
-    justify-content:space-around;
-}
-
-
-.p2_telediario{
-  font-size: 18px;
-  color: #777;
-}
-.p2_app{
-  font-size: 18px;
-  color: #472c09;
-}
-*/
-/*
-.container_flex_app{
+ .age_item_0{
+    background-color: #e4eed4;
     width: 100%;
-	background:#f2f2f2;
-	padding: 0px;
-	border:5px solid #f2f2f2;
-	margin: 0px;
-    color: #fff;
+    display: -webkit-flex;
+    display: -ms-flexbox;
 
-	display: flex;
+
+
+    display: flex;
     flex-wrap: wrap; 
-    align-items: center;
+    /*  align-items: center;*/
+    align-content: center;
     justify-content:center;
-}
-.container_app_item{
-    color: #472c09;
-	margin: 5px;
-	width: 300px;
-	height: 50px;
-	text-align: center;	
-	font-size: 30px;
+ 
+ }
+ .age_item_0_1{
+    color: #fff;
+  margin: 5px;
+  width: 170px;
+  height: 100px;
+  /*height: 50px;
+  background:#bada55;*/
+  text-align: center; 
+  font-size: 26px;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
-
-    background-color: #edd94f;
+    /*  border-left: 6px solid #fff;*/
 
     display: flex;
     flex-wrap: wrap; 
     align-items: center;
     justify-content:space-around;
+
+ }
+ .p1_multimedios{
+  font-size: 14px;
+ color: #003a5c;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+/* #Canvas Element Circular charts
+================================================== */
+canvas, video {display: inline-block;}
+
+.stats-container {
+margin: 0;
+padding: 0;
+list-style: none;
+text-align: center;
+padding-bottom: 10px;
+
+}
+
+.stats-container li {
+  display: inline-block;
+  margin: 0;
+  position: relative;
+}
+
+.circular-stat {
+  position: relative;
+}
+
+.circular-stat .digit-label {
+  color:  #1e5372;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-size: 1.6em;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: 11.5%;
+  width: 75%;
+  left: 6%;
+  padding: 30px 0 0 30px;
+    text-shadow:-1px 1px 0px #fff 
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.circular-stat .text-label {
+  font-family:"Noto Sans", "Helvetica Neue", Helvetica, arial, sans-serif;
+  color: #333;
+  font-size:1.0em;
+  top: 50%;
+  left: 21.875%;
+  width: 56.25%;
+  padding-top: 6px;
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  border-top: 1px solid #999;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+span.text-title {
+  color:  #72668a;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, arial, sans-serif;
+  text-align: center;
+  letter-spacing: -1px;
+  font-size: 1.3em;
+  font-weight: 400;
+  text-shadow: -1px 1px 0px #FFF;
+  padding: 30px 10px 0 0px;
+  margin-top: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 99999;
+  display: block;
+  text-shadow: -1px 1px 0px #fff;
+}
+
+
+
+@media only screen and (min-width: 1010px) { 
+.stats-container li {margin: 0 2% 5px;}
+}
+@media only screen and (max-width: 1009px) { 
+.stats-container li {margin: 0 -.2em 5px;}
+}
+
+
+/* desktop_movil*/
+
+
+.desktop_movil{
+   width: 100%;
+     color: #f8fcf2;
+   border:0px solid #f2f2f2;
+   /*background: #faf7f3;   fallback for old browsers */
+   display: flex;
+    flex-wrap: wrap; 
+    /*  align-items: center;*/
+     align-content: center;
+    justify-content:center;
+}
+.item_desktop_movil{
+
+  margin: 5px;
+  width: 600px;
+  /*height: 50px;
+  background:#bada55;*/
+  text-align: center; 
+  font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
 }
 
 
 
 
-*/
+
+
+/* fin desktop_movil*/
+
+
+
+
+
 section {
   font-family: montserrat;
   background: #F4F4F4;
